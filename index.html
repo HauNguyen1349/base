@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="./style.css">
     <title>Base</title>
 </head>
 
 <body>
     <!-- Top Navigation -->
-    <header class="fixed left-0 top-0 w-full bg-white shadow z-50">
+    <header class="fixed left-0 top-0 w-full bg-transparent">
         <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-7">
             <div class="w-full lg:w-1/4 flex items-center justify-between">
                 <a href="index.html">
@@ -25,10 +27,10 @@
             <div class="w-full lg:w-3/4 hidden lg:flex items-center justify-between">
                 <nav>
                     <ul class="flex flex-col lg:flex-row gap-5 lg:gap-10 items-center">
-                        <li><a href="index.html" class="hover:text-primary">Home</a></li>
-                        <li><a href="#features" class="hover:text-primary">Features</a></li>
+                        <li><a href="index.html" class="text-[#79808A] hover:text-primary">Home</a></li>
+                        <li><a href="#features" class="text-[#79808A] hover:text-primary">Features</a></li>
                         <li class="relative group">
-                            <button class="flex items-center gap-1 hover:text-primary">
+                            <button class="flex items-center gap-1 text-[#79808A] hover:text-primary">
                                 Pages
                                 <i class="ph ph-caret-down"></i>
                             </button>
@@ -41,7 +43,7 @@
                                 <li><a href="404.html" class="text-body hover:text-primary">404</a></li>
                             </ul>
                         </li>
-                        <li><a href="#support" class="hover:text-primary">Support</a></li>
+                        <li><a href="#support" class="text-[#79808A] hover:text-primary">Support</a></li>
                     </ul>
                 </nav>
                 <div class="flex items-center gap-6">
@@ -61,7 +63,7 @@
             <img src="./image/shape-03.svg" alt="shape"
                 class="hidden 2xl:block absolute left-[15%] bottom-[10%] z-10" />
             <img src="./image/shape-04.svg" alt="shape" class="absolute right-0 top-0" />
-            <img src="./image/hero.png" alt="Woman" class="absolute right-0 top-0 z-1" />
+            <img src="./image/hero.png" alt="Woman" class="absolute right-0 top-0 z-0" />
         </div>
 
         <div class="mx-auto max-w-7xl px-4 md:px-8 2xl:px-0">
@@ -290,7 +292,8 @@
     </section>
 
 
-
+    <!-- Custom JavaScript -->
+    <script src="./main.js"></script>
 </body>
 
 </html>
