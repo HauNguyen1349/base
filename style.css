@@ -2778,3 +2778,50 @@
     transform: rotate(0deg);
   }
 }
+
+.testimonial-01 .swiper-button-prev,
+.testimonial-01 .swiper-button-next {
+  position: static !important;  
+  top: auto !important;          
+  left: auto !important;         
+  right: auto !important;        
+  margin-top: 0 !important;      
+  transform: none !important;    
+
+ 
+  width: 2.5rem !important;  
+  height: 2.5rem !important; 
+  
+}
+
+
+.swiper.testimonial-01 > .flex.items-center.justify-center {
+   position: relative; 
+   z-index: 10; 
+ }
+
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: none !important;
+  display: none !important;
+}
+
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  display: block; 
+  width: 14px;  
+  height: 14px; 
+}
+
+
+ .swiper-button-prev,
+ .swiper-button-next {
+   font-family: initial !important;
+   font-size: initial !important;
+   line-height: 0 !important; 
+   text-indent: -9999px !important; 
+   background-image: none !important;
+ }
+

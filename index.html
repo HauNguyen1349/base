@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Base - Tailwind CSS Startup Template</title>
   <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8.4.2/swiper-bundle.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -108,7 +108,7 @@
               <input type="checkbox" :value="darkMode" @change="darkMode = !darkMode"
                 class="absolute top-0 z-50 w-full h-full m-0 opacity-0 cursor-pointer" />
               <!-- Icon Sun -->
-              <svg :class="{ md'fill-white' : page === 'home', 'fill-black' : page === 'home' && stickyMenu }"
+              <svg :class="{ 'md:fill-white' : page === 'home' &&!stickyMenu, 'fill-black' : page === 'home' && stickyMenu }"
                 class="fill-body dark:hidden" width="25" height="25" viewBox="0 0 25 25" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -1397,7 +1397,7 @@
   </script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper@8.4.2/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="https://unpkg.com/fslightbox@3/index.js"></script>
@@ -1405,9 +1405,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       try {
         if (typeof Swiper !== 'undefined') {
-          var testimonial01 = new Swiper('.testimonial-01', {
-            
-            modules: [Swiper.Navigation], 
+          var testimonial01 = new Swiper('.testimonial-01', { 
             loop: true,
             spaceBetween: 50,
             centeredSlides: false,
